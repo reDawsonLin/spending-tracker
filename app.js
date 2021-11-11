@@ -1,26 +1,30 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
-
+const isEqual = require('./controller/isEqual')
+const methodOverride = require('method-override')
+const routes = require('./routes')
 
 require('./config/mongoose')
 
 
 const app = express()
-
+const PORT = process.env.PORT || 3000
 
 app.engine('hbs', exphbs({
   defaultLayout: 'main',
-  extname: '.hbs'
+  extname: '.hbs',
+  helpers: { isEqual }
 }))
 app.set('view engine', 'hbs')
 
-// 設定首頁路由
-app.get('/', (req, res) => {
-  res.render('index')
-})
+
+app.use(express.urlencoded({ extended: true }))
+app.use(methodOverride('_method'))
+app.use(routes)
+
 
 
 // 設定 port 3000
-app.listen(3000, () => {
-  console.log('App is running on http://localhost:3000')
+app.listen(PORT, () => {
+  console.log(`App is running on http://localhost:${PORT}`)
 })

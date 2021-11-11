@@ -1,7 +1,7 @@
 const db = require('../../config/mongoose')
-const Spending = require('../spending')
+const Record = require('../record')
 
-const spending = [{
+const record = [{
     name: '早餐',
     date: '2021-05-05',
     category: '餐飲食品',
@@ -16,7 +16,7 @@ const spending = [{
   {
     name: '機車加油',
     date: '2021-05-05',
-    category: '交通出行',
+    category: '交通通勤',
     amount: 100
   },
   {
@@ -35,8 +35,8 @@ const spending = [{
 
 db.once('open', () => {
   console.log('mongodb connected!')
-  Spending.create(spending).then(() => {
-    console.log('done inserting spending')
+  Record.create(record).then(() => {
+    console.log('done inserting record')
     db.close()
   })
 })

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "seed": "node models/seeds/categorySeeder.js && node models/seeds/spendingSeeder.js",
+    "seed": "node models/seeds/categorySeeder.js && node models/seeds/recordSeeder.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,6 +15,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.3.4",
+    "method-override": "^3.0.0",
     "mongoose": "^5.13.13"
   }
 }

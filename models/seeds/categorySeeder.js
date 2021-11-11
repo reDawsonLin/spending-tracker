@@ -24,7 +24,7 @@ const category = [{
 ]
 
 db.once('open', () => {
-  console.log('mongodb connected!')
+  ('mongodb connected!')
   Category.create(category).then(() => {
     console.log('done inserting category')
     db.close()
