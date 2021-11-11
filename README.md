@@ -1,9 +1,9 @@
 # Spending Tracker
 
-打造網路記帳工具
-前端使用 BootStrap/Express-Handlebar
-後端使用 Node.js/ Express/ MongoDB/ Heroku 
-作品連結：https://guarded-cliffs-96389.herokuapp.com/
+- 打造網路記帳工具
+- 前端使用 BootStrap/Express-Handlebar
+- 後端使用 Node.js/ Express/ MongoDB/ Heroku 
+- 作品連結：https://guarded-cliffs-96389.herokuapp.com/
 
 ## 預覽圖
 
